@@ -37,9 +37,16 @@ INSTALLED_APPS = [
     'django.contrib.messages', #One time notifications to user
     'django.contrib.staticfiles', #Serving staticfiles
     'organaizo_test',
+    'debug_toolbar',
 ]
 
+INTERNAL_IPS = [
+    # ...
+    '127.0.0.1',
+    # ...
+]
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

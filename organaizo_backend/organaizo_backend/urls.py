@@ -1,3 +1,6 @@
+from django.urls import path, inlcude
+import debug_toolbar
+
 """
 URL configuration for organaizo_backend project.
 
@@ -19,5 +22,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('organaizo_test/', include('organaizo_test.urls'))
+    path('organaizo_test/', include('organaizo_test.urls')),
+    path('__debug__/', include(debug_toolbar.urls)),
 ]
